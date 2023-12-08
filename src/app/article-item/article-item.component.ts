@@ -10,7 +10,18 @@ import { Component } from '@angular/core';
 export class ArticleItemComponent {
   name: string = 'Smart watch';
   price: number = 199.99;
-  imageUrl: string = 'imatge.jpg'; 
+  imageUrl: string = 'src\assets\smartwatch.png'; 
   isOnSale: boolean = true;
   quantityInCart: number = 0;
+
+    increment() {
+      this.quantityInCart++;
+  }
+
+  decrement() {
+      if (this.quantityInCart > 0) {
+          this.quantityInCart--;
+      }
+  }
 }
+

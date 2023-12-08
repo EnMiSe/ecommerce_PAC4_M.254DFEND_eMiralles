@@ -1,0 +1,9 @@
+<p>article-item works!</p>
+<div class="article-item">
+    <h3>{{ name }}</h3>
+    <img [src]="imageUrl" alt="{{ name }}">
+    <p>Preu: {{ price | currency:'EUR' }}</p>
+    <p *ngIf="isOnSale" class="sale">En Venda!</p>
+    <p>Quantitat Comprada: {{ quantityInCart }}</p>
+  </div>
+  

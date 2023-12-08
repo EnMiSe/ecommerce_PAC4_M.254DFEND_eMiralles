@@ -2,9 +2,9 @@
 <div class="article-item" [ngClass]="{'sale': isOnSale}">
     <h3>{{ name }}</h3>
     <img [src]="src\assets\smartwatch.png" alt="{{ smartwatchImage }}">
-    <p>Preu: {{ price | currency:'EUR' }}</p>
+    <p class="price">Preu: {{ price | currency:'EUR' }}</p>
     <p *ngIf="isOnSale" class="sale">En Venda!</p>
-    <div>
+    <div class="actions">
       <button (click)="decrement()">-</button>
       <span>Quantitat: {{ quantityInCart }}</span>
       <button (click)="increment()">+</button>

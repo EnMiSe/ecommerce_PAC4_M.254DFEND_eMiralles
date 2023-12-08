@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ArticleItemComponent {
   name: string = 'Smart watch';
   price: number = 199.99;
-  imageUrl: string = 'src\assets\smartwatch.png'; 
+  imageUrl: string = 'assets\smartwatch.png'; 
   isOnSale: boolean = true;
   quantityInCart: number = 0;
 

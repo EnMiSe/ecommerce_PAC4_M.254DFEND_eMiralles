@@ -1,18 +1,29 @@
-.article-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .article-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .sale {
-    color: red;
-    background-color: orangered;
-  }
-  
+.article-container {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.article-container img {
+  width: 100%;
+  height: auto;
+}
+
+.price {
+  color: #333;
+  font-size: 1.5em;
+}
+
+.actions button {
+  margin: 0 5px;
+}
+
+.sale {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: orangered;
+  color: white;
+  padding: 5px;
+}

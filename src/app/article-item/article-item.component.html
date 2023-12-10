@@ -1,13 +1,23 @@
 <p>article-item works!</p>
-<div class="article-item" [ngClass]="{'sale': isOnSale}">
-    <h3>{{ name }}</h3>
-    <img [src]="src\assets\smartwatch.png" alt="{{ smartwatchImage }}">
-    <p class="price">Preu: {{ price | currency:'EUR' }}</p>
-    <p *ngIf="isOnSale" class="sale">En Venda!</p>
-    <div class="actions">
-      <button (click)="decrement()">-</button>
-      <span>Quantitat: {{ quantityInCart }}</span>
-      <button (click)="increment()">+</button>
-    </div>
-  </div>
+<div class="article-item" [ngClass]="{ sale: isOnSale }">
+  <h3>{{ name }}</h3>
+  <img [src]="assets\smartwatch.png" alt="{{ smartwatchImage }}" />
+  <p class="price">Preu: {{ price | currency : "EUR" }}</p>
+  <p *ngIf="isOnSale" class="sale">En Venda!</p>
   
+  <div class="actions">
+    <button (click)="decrement()">-</button>
+    <span>Quantitat: {{ quantityInCart }}</span>
+    <button (click)="increment()">+</button>
+  </div>
+
+  <p [ngClass]="{ 'price-unavailable': !isAvailable }">
+    {{ price | currency : "EUR" }}
+  </p>
+
+  <div *ngIf="isAvailable">
+    <button (click)="decrement()">-</button>
+    <span>{{ quantityInCart }}</span>
+    <button (click)="increment()">+</button>
+  </div>
+</div>
